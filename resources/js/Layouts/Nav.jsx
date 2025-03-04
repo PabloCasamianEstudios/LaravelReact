@@ -2,10 +2,10 @@ import {router} from "@inertiajs/react";
 
 export default function Nav() {
     const handleLogin = () => {
-        return route('login');
+        router.get('login');
     }
     const handleRegister = () => {
-        return route('register');
+        router.get('register');
     }
 
     return (
