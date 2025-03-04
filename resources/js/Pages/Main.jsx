@@ -1,6 +1,6 @@
 import Layout from "@/Layouts/Layout.jsx";
 
-export default function Main(nombre, numero) {
+export default function Main(props) {
     const nombre = props.nombre;
     const numero = props.numero;
 

@@ -1,8 +1,15 @@
+import {router} from "@inertiajs/react";
+
 export default function Nav() {
+    const handleLogin = () => {
+        return route('login');
+    }
+    const handleRegister = () => {
+        return route('register');
+    }
 
     return (
         <>
-            <header className='bg-gradient-to-r from-[#1a759f] to-[#3a5a40] text-white h-10 md:h-16 border-b border-white/70'>
                 <nav className='flex items-center justify-between max-w-[1400px] px-4 mx-auto h-full'>
                     <div className="font-300 text-xl">
                         Logo
@@ -20,8 +27,8 @@ export default function Nav() {
                             </li>
                         </ul>
                         <div>
-                            <button className='px-4 py-2 border uppercase'>Login</button>
-                            <button className='px-4 py-2 border uppercase'>Register</button>
+                            <button onClick={handleLogin} className='px-4 py-2 border uppercase'>Login</button>
+                            <button onClick={handleRegister} className='px-4 py-2 border uppercase'>Register</button>
                         </div>
                     </div>
                     <button className='md:hidden'>
@@ -43,18 +50,7 @@ export default function Nav() {
                         </svg>
                     </button>
                 </nav>
-            </header>
-            <main className='min-h-screen bg-gradient-to-r from-[#1a759f] to-[#3a5a40] text-white'>
-                <div className="max-w-[1400px] px-4 mx-auto md:grid md:grid-cols-2 min-h-[calc(100vh-5rem)]">
-                    <div className="flex flex-col justify-end h-full py-8">
-                        <h1 className='fadeInDown transition-all delay-1000 font-bold uppercase text-3xl md:text-7xl tracking-tight'>This is a landing page of a new component</h1>
-                        <p className='text-xl md:text-2xl color-white/70'>This is a landing page an the description will be here.</p>
-                    </div>
-                    <div className="relative">
-                        <div className="w-1/3 h-1/3 absolute bottom-0 right-0 border-b-2 border-r-2 border-white/70"></div>
-                    </div>
-                </div>
-            </main>
+
         </>
     )
 }
